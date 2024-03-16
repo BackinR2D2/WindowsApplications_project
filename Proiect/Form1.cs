@@ -136,5 +136,18 @@ namespace Proiect
                 this.Close();
             }
         }
+
+        private void adaugaTraducereToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Meniu meniu = new Meniu();
+            meniu.TopLevel = false;
+            if(MainContainer.Controls.Count > 0)
+            {
+                MainContainer.Controls.Clear();
+            }
+            MainContainer.Controls.Add(meniu);
+            meniu.BringToFront();
+            meniu.Show();
+        }
     }
 }

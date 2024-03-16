@@ -24,9 +24,9 @@ namespace Proiect
             }
         }
 
-        public void adaugaTraducere(Cuvant cuvant, Cuvant cuvantTradus)
+        public void adaugaTraducere(Cuvant cuvantTradus, Cuvant traducere)
         {
-            cuvinte.Add(cuvant, cuvantTradus);
+            cuvinte.Add(cuvantTradus, traducere);
         }
 
         public void scrieInFisier()

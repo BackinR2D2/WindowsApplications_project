@@ -44,6 +44,7 @@
             this.germanaEnglezaMeniu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.Panel();
+            this.adaugaTraducereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +68,7 @@
             this.romanaMeniu,
             this.englezaMeniu,
             this.germanaMeniu,
+            this.adaugaTraducereToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -96,14 +98,14 @@
             // romanaEnglezaMeniu
             // 
             this.romanaEnglezaMeniu.Name = "romanaEnglezaMeniu";
-            this.romanaEnglezaMeniu.Size = new System.Drawing.Size(122, 22);
+            this.romanaEnglezaMeniu.Size = new System.Drawing.Size(127, 22);
             this.romanaEnglezaMeniu.Text = "Engleza";
             this.romanaEnglezaMeniu.Click += new System.EventHandler(this.romanaEnglezaMeniu_Click);
             // 
             // romanaGermanaMeniu
             // 
             this.romanaGermanaMeniu.Name = "romanaGermanaMeniu";
-            this.romanaGermanaMeniu.Size = new System.Drawing.Size(122, 22);
+            this.romanaGermanaMeniu.Size = new System.Drawing.Size(127, 22);
             this.romanaGermanaMeniu.Text = "Germana";
             this.romanaGermanaMeniu.Click += new System.EventHandler(this.romanaGermanaMeniu_Click);
             // 
@@ -120,14 +122,14 @@
             // englezaRomanaMeniu
             // 
             this.englezaRomanaMeniu.Name = "englezaRomanaMeniu";
-            this.englezaRomanaMeniu.Size = new System.Drawing.Size(122, 22);
+            this.englezaRomanaMeniu.Size = new System.Drawing.Size(180, 22);
             this.englezaRomanaMeniu.Text = "Romana";
             this.englezaRomanaMeniu.Click += new System.EventHandler(this.englezaRomanaMeniu_Click);
             // 
             // englezaGermanaMeniu
             // 
             this.englezaGermanaMeniu.Name = "englezaGermanaMeniu";
-            this.englezaGermanaMeniu.Size = new System.Drawing.Size(122, 22);
+            this.englezaGermanaMeniu.Size = new System.Drawing.Size(180, 22);
             this.englezaGermanaMeniu.Text = "Germana";
             this.englezaGermanaMeniu.Click += new System.EventHandler(this.englezaGermanaMeniu_Click);
             // 
@@ -144,14 +146,14 @@
             // germanaRomanaMeniu
             // 
             this.germanaRomanaMeniu.Name = "germanaRomanaMeniu";
-            this.germanaRomanaMeniu.Size = new System.Drawing.Size(118, 22);
+            this.germanaRomanaMeniu.Size = new System.Drawing.Size(180, 22);
             this.germanaRomanaMeniu.Text = "Romana";
             this.germanaRomanaMeniu.Click += new System.EventHandler(this.germanaRomanaMeniu_Click);
             // 
             // germanaEnglezaMeniu
             // 
             this.germanaEnglezaMeniu.Name = "germanaEnglezaMeniu";
-            this.germanaEnglezaMeniu.Size = new System.Drawing.Size(118, 22);
+            this.germanaEnglezaMeniu.Size = new System.Drawing.Size(180, 22);
             this.germanaEnglezaMeniu.Text = "Engleza";
             this.germanaEnglezaMeniu.Click += new System.EventHandler(this.germanaEnglezaMeniu_Click);
             // 
@@ -171,6 +173,14 @@
             this.MainContainer.Name = "MainContainer";
             this.MainContainer.Size = new System.Drawing.Size(800, 417);
             this.MainContainer.TabIndex = 2;
+            // 
+            // adaugaTraducereToolStripMenuItem
+            // 
+            this.adaugaTraducereToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adaugaTraducereToolStripMenuItem.Name = "adaugaTraducereToolStripMenuItem";
+            this.adaugaTraducereToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.adaugaTraducereToolStripMenuItem.Text = "Adauga Traducere";
+            this.adaugaTraducereToolStripMenuItem.Click += new System.EventHandler(this.adaugaTraducereToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -208,6 +218,7 @@
         private System.Windows.Forms.ToolStripMenuItem germanaEnglezaMeniu;
         private System.Windows.Forms.Panel MainContainer;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem adaugaTraducereToolStripMenuItem;
     }
 }
 
