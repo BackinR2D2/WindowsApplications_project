@@ -1,10 +1,13 @@
 ﻿using Microsoft.SqlServer.Server;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Proiect
 {
@@ -27,6 +30,45 @@ namespace Proiect
         public void adaugaTraducere(Cuvant cuvantTradus, Cuvant traducere)
         {
             cuvinte.Add(cuvantTradus, traducere);
+            //string traducereString = cuvantTradus.Tip + "|" + cuvantTradus + "|" + traducere.Tip + "|" + traducere + "|" + cuvantTradus.Explicatie + "|" + traducere.Explicatie + Environment.NewLine;
+            //File.AppendAllText("dictionar.txt", traducereString);
+        }
+
+        public void stergeDinFisier(string[] element) 
+        {
+            //cuvinte.Clear();
+            //StreamReader reader = File.OpenText("dictionar.txt");
+            //string linie;
+            //string text = "";
+            //int NR_COLOANE = 6;
+            //while ((linie = reader.ReadLine()) != null)
+            //{
+            //    string[] items = linie.Split('|');
+            //    Boolean suntEgale = true;
+            //    for(int i = 0; i < NR_COLOANE; i++)
+            //    {
+            //        if (items[i] != element[i])
+            //        {
+            //            suntEgale = false;
+            //            break;
+            //        }
+            //    }
+            //    if(!suntEgale)
+            //    {
+            //        Cuvant tradus = new Cuvant(items[0], items[1], items[4]);
+            //        Cuvant traducere = new Cuvant(items[2], items[3], items[5]);
+            //        text += tradus.Tip + "|" + tradus + "|" + traducere.Tip + "|" + traducere + "|" + tradus.Explicatie + "|" + traducere.Explicatie + Environment.NewLine;
+            //        File.AppendAllText("dictionarTMP.txt", text);
+            //    }
+            //}
+            //File.Replace("dictionarTMP.txt", "dictionar.txt", "dictionarReplaced.txt");
+
+            Cuvant cuvantDeSters = Cuvinte.Keys.First<Cuvant>(cuvant =>
+            {   
+               if(cuvant.Tip == element[0] && cuvant.Label == element[2] && cuvant.Explicatie.ToString() == element[4]) return true; 
+                return false;
+            });
+            cuvinte.Remove(cuvantDeSters);
         }
 
         public void scrieInFisier()
@@ -38,6 +80,7 @@ namespace Proiect
             }
 
             File.AppendAllText("dictionar.txt", text);
+            
         }
 
         public void citesteDinFisier()

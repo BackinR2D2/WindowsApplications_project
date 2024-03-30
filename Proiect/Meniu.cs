@@ -43,7 +43,6 @@ namespace Proiect
             {
                 Dictionar dictionar = new Dictionar();
                 dictionar.adaugaTraducere(cuvantTradus, traducere);
-                dictionar.scrieInFisier();
                 MessageBox.Show("Traducere adaugata cu succes.");
             } else
             {

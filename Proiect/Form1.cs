@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Proiect
 {
@@ -148,6 +149,19 @@ namespace Proiect
             MainContainer.Controls.Add(meniu);
             meniu.BringToFront();
             meniu.Show();
+        }
+
+        private void listaTraduceriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaTraduceri listaTraduceri = new ListaTraduceri();
+            listaTraduceri.TopLevel = false;
+            if (MainContainer.Controls.Count > 0)
+            {
+                MainContainer.Controls.Clear();
+            }
+            MainContainer.Controls.Add(listaTraduceri);
+            listaTraduceri.BringToFront();
+            listaTraduceri.Show();
         }
     }
 }

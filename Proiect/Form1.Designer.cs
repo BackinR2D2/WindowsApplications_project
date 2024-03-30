@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Homepage = new System.Windows.Forms.ToolStripMenuItem();
             this.romanaMeniu = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,24 +39,12 @@
             this.germanaMeniu = new System.Windows.Forms.ToolStripMenuItem();
             this.germanaRomanaMeniu = new System.Windows.Forms.ToolStripMenuItem();
             this.germanaEnglezaMeniu = new System.Windows.Forms.ToolStripMenuItem();
+            this.adaugaTraducereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.Panel();
-            this.adaugaTraducereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
+            this.listaTraduceriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 10);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(57, 6);
             // 
             // menuStrip1
             // 
@@ -68,6 +53,7 @@
             this.romanaMeniu,
             this.englezaMeniu,
             this.germanaMeniu,
+            this.listaTraduceriToolStripMenuItem,
             this.adaugaTraducereToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -122,14 +108,14 @@
             // englezaRomanaMeniu
             // 
             this.englezaRomanaMeniu.Name = "englezaRomanaMeniu";
-            this.englezaRomanaMeniu.Size = new System.Drawing.Size(180, 22);
+            this.englezaRomanaMeniu.Size = new System.Drawing.Size(127, 22);
             this.englezaRomanaMeniu.Text = "Romana";
             this.englezaRomanaMeniu.Click += new System.EventHandler(this.englezaRomanaMeniu_Click);
             // 
             // englezaGermanaMeniu
             // 
             this.englezaGermanaMeniu.Name = "englezaGermanaMeniu";
-            this.englezaGermanaMeniu.Size = new System.Drawing.Size(180, 22);
+            this.englezaGermanaMeniu.Size = new System.Drawing.Size(127, 22);
             this.englezaGermanaMeniu.Text = "Germana";
             this.englezaGermanaMeniu.Click += new System.EventHandler(this.englezaGermanaMeniu_Click);
             // 
@@ -146,16 +132,24 @@
             // germanaRomanaMeniu
             // 
             this.germanaRomanaMeniu.Name = "germanaRomanaMeniu";
-            this.germanaRomanaMeniu.Size = new System.Drawing.Size(180, 22);
+            this.germanaRomanaMeniu.Size = new System.Drawing.Size(122, 22);
             this.germanaRomanaMeniu.Text = "Romana";
             this.germanaRomanaMeniu.Click += new System.EventHandler(this.germanaRomanaMeniu_Click);
             // 
             // germanaEnglezaMeniu
             // 
             this.germanaEnglezaMeniu.Name = "germanaEnglezaMeniu";
-            this.germanaEnglezaMeniu.Size = new System.Drawing.Size(180, 22);
+            this.germanaEnglezaMeniu.Size = new System.Drawing.Size(122, 22);
             this.germanaEnglezaMeniu.Text = "Engleza";
             this.germanaEnglezaMeniu.Click += new System.EventHandler(this.germanaEnglezaMeniu_Click);
+            // 
+            // adaugaTraducereToolStripMenuItem
+            // 
+            this.adaugaTraducereToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adaugaTraducereToolStripMenuItem.Name = "adaugaTraducereToolStripMenuItem";
+            this.adaugaTraducereToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
+            this.adaugaTraducereToolStripMenuItem.Text = "Adauga Traducere";
+            this.adaugaTraducereToolStripMenuItem.Click += new System.EventHandler(this.adaugaTraducereToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -174,13 +168,13 @@
             this.MainContainer.Size = new System.Drawing.Size(800, 417);
             this.MainContainer.TabIndex = 2;
             // 
-            // adaugaTraducereToolStripMenuItem
+            // listaTraduceriToolStripMenuItem
             // 
-            this.adaugaTraducereToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.adaugaTraducereToolStripMenuItem.Name = "adaugaTraducereToolStripMenuItem";
-            this.adaugaTraducereToolStripMenuItem.Size = new System.Drawing.Size(114, 29);
-            this.adaugaTraducereToolStripMenuItem.Text = "Adauga Traducere";
-            this.adaugaTraducereToolStripMenuItem.Click += new System.EventHandler(this.adaugaTraducereToolStripMenuItem_Click);
+            this.listaTraduceriToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listaTraduceriToolStripMenuItem.Name = "listaTraduceriToolStripMenuItem";
+            this.listaTraduceriToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
+            this.listaTraduceriToolStripMenuItem.Text = "Lista Traduceri";
+            this.listaTraduceriToolStripMenuItem.Click += new System.EventHandler(this.listaTraduceriToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -193,7 +187,6 @@
             this.Name = "Form1";
             this.Text = "Proiect";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.contextMenuStrip1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -202,9 +195,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Homepage;
         private System.Windows.Forms.ToolStripMenuItem romanaMeniu;
@@ -219,6 +209,7 @@
         private System.Windows.Forms.Panel MainContainer;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adaugaTraducereToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listaTraduceriToolStripMenuItem;
     }
 }
 

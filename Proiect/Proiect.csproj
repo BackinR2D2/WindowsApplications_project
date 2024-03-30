@@ -61,6 +61,12 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaTraduceri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaTraduceri.Designer.cs">
+      <DependentUpon>ListaTraduceri.cs</DependentUpon>
+    </Compile>
     <Compile Include="Meniu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaTraduceri.resx">
+      <DependentUpon>ListaTraduceri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Meniu.resx">
       <DependentUpon>Meniu.cs</DependentUpon>
