@@ -71,16 +71,24 @@ namespace Proiect
             cuvinte.Remove(cuvantDeSters);
         }
 
-        public void scrieInFisier()
+        public void scrieInFisier(List<Dictionary<Cuvant, Cuvant>> lista)
         {
             string text = "";
-            foreach(var item in cuvinte)
+
+            foreach(Dictionary<Cuvant, Cuvant> cuvinte in lista)
             {
-                text += item.Key.Tip + "|" + item.Key + "|" + item.Value.Tip + "|" + item.Value + "|" + item.Key.Explicatie + "|" + item.Value.Explicatie + Environment.NewLine;
+                foreach (var item in cuvinte)
+                {
+                    text += item.Key.Tip + "|" + item.Key + "|" + item.Value.Tip + "|" + item.Value + "|" + item.Key.Explicatie + "|" + item.Value.Explicatie + Environment.NewLine;
+                }
             }
 
-            File.AppendAllText("dictionar.txt", text);
-            
+            if(!File.Exists("dictionar.txt"))
+            {
+                File.WriteAllText("dictionar.txt", text);
+            }
+
+         
         }
 
         public void citesteDinFisier()

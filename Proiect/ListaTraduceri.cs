@@ -108,7 +108,7 @@ namespace Proiect
             string content = "";
             foreach(var item in dictionar.Cuvinte)
             {
-                content += item.Key.Tip + ", " + item.Key + ", " + item.Value.Tip + ", " + item.Value + " " + item.Key.Explicatie + ", " + item.Value.Explicatie + Environment.NewLine;
+                content += item.Key.Tip + ", " + item.Key + ", " + item.Value.Tip + ", " + item.Value + Environment.NewLine;
             }
             Font font = new Font("Arial", 9.75F);
             ev.Graphics.DrawString(content, font, Brushes.Black,

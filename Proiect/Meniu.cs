@@ -33,20 +33,76 @@ namespace Proiect
 
             Cuvant traducere = new Cuvant(traducereTip, traducereLabel, traducereExplicatie);
 
-            if(cuvantTradusTip == traducereTip && cuvantTradusTip.Length > 0 && traducereTip.Length > 0)
+            if(cuvantTradusTip == traducereTip)
             {
-                MessageBox.Show("Cuvintele nu pot avea acelasi tip.");
-                return;
-            } 
+                errCatch.SetError(cuvantTradusSelect, "Cuvintele nu pot avea acelasi tip.");
+                errCatch.SetError(traducereSelect, "Cuvintele nu pot avea acelasi tip.");
+            } else
+            {
+                errCatch.SetError(cuvantTradusSelect, "");
+                errCatch.SetError(traducereSelect, "");
+            }
             
             if(cuvantTradusTip.Length > 0 && cuvantTradusLabel.Length > 0 && cuvantTradusExplicatie.Length > 0 && traducereLabel.Length > 0 && traducereTip.Length > 0 && traducereExplicatie.Length > 0)
             {
                 Dictionar dictionar = new Dictionar();
                 dictionar.adaugaTraducere(cuvantTradus, traducere);
+                errCatch.SetError(cuvantTradusSelect, "");
+                errCatch.SetError(cuvantTradusTextbox, "");
+                errCatch.SetError(explicatieCuvantTradusTextbox, "");
+                errCatch.SetError(traducereTextbox, "");
+                errCatch.SetError(traducereSelect, "");
+                errCatch.SetError(explicatieTraducereTextbox, "");
                 MessageBox.Show("Traducere adaugata cu succes.");
             } else
             {
-                MessageBox.Show("Campuri incomplete.");
+                if(cuvantTradusTip.Length == 0)
+                {
+                    errCatch.SetError(cuvantTradusSelect, "Camp incomplet");
+                } else
+                {
+                    errCatch.SetError(cuvantTradusSelect, "");
+                }
+
+                if(cuvantTradusLabel.Length == 0)
+                {
+                    errCatch.SetError(cuvantTradusTextbox, "Camp incomplet");
+                } else
+                {
+                    errCatch.SetError(cuvantTradusTextbox, "");
+                }
+
+                if(cuvantTradusExplicatie.Length == 0)
+                {
+                    errCatch.SetError(explicatieCuvantTradusTextbox, "Camp incomplet");
+                } else
+                {
+                    errCatch.SetError(explicatieCuvantTradusTextbox, "");
+                }
+
+                if(traducereLabel.Length == 0)
+                {
+                    errCatch.SetError(traducereTextbox, "Camp incomplet");
+                } else
+                {
+                    errCatch.SetError(traducereTextbox, "");
+                }
+
+                if(traducereTip.Length == 0)
+                {
+                    errCatch.SetError(traducereSelect, "Camp incomplet");
+                } else
+                {
+                    errCatch.SetError(traducereSelect, "");
+                }
+
+                if(traducereExplicatie.Length == 0)
+                {
+                    errCatch.SetError(explicatieTraducereTextbox, "Camp incomplet");
+                } else
+                {
+                    errCatch.SetError(explicatieTraducereTextbox, "");
+                }
             }
         }
     }

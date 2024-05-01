@@ -18,6 +18,8 @@ namespace Proiect
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            List<Dictionary<Cuvant, Cuvant>> listaDictionare = new List<Dictionary<Cuvant, Cuvant>>();
+
             Cuvant cuvant1 = new Cuvant("Romana", "capitalism", "Sistem social-economic si politic-ideologic bazat pe proprietatea privata, piata libera si libertatea de actiune.");
             Cuvant cuvant2 = new Cuvant("Engleza", "capitalism", "An economic and political system in which property, business, and industry are controlled by private owners rather than by the state, with the purpose of making a profit");
             Cuvant cuvant9 = new Cuvant("Germana", "Kapitalismus", "Sozialökonomisches und politisch-ideologisches System, das auf Privateigentum, freiem Markt und Handlungsfreiheit basiert.");
@@ -42,8 +44,10 @@ namespace Proiect
             cuvinteRE.Add(cuvant5, cuvant6);
             cuvinteRE.Add(cuvant7, cuvant8);
 
-            Dictionar dictionarRE = new Dictionar(cuvinteRE);
-            dictionarRE.scrieInFisier();
+            listaDictionare.Add(cuvinteRE);
+
+            //Dictionar dictionarRE = new Dictionar(cuvinteRE);
+            //dictionarRE.scrieInFisier();
 
             // Engleza-Romana
             Dictionary<Cuvant, Cuvant> cuvinteER = new Dictionary<Cuvant, Cuvant>();
@@ -53,8 +57,10 @@ namespace Proiect
             cuvinteER.Add(cuvant6, cuvant5);
             cuvinteER.Add(cuvant8, cuvant7);
 
-            Dictionar dictionarER = new Dictionar(cuvinteER);
-            dictionarER.scrieInFisier();
+            listaDictionare.Add(cuvinteER);
+
+            //Dictionar dictionarER = new Dictionar(cuvinteER);
+            //dictionarER.scrieInFisier();
 
             // Romana-Germana
             Dictionary<Cuvant, Cuvant> cuvinteRG = new Dictionary<Cuvant, Cuvant>();
@@ -64,8 +70,10 @@ namespace Proiect
             cuvinteRG.Add(cuvant5, cuvant11);
             cuvinteRG.Add(cuvant7, cuvant12);
 
-            Dictionar dictionarRG = new Dictionar(cuvinteRG);
-            dictionarRG.scrieInFisier();
+            listaDictionare.Add(cuvinteRG);
+
+            //Dictionar dictionarRG = new Dictionar(cuvinteRG);
+            //dictionarRG.scrieInFisier();
 
             // Engleza-Germana
             Dictionary<Cuvant, Cuvant> cuvinteEG = new Dictionary<Cuvant, Cuvant>();
@@ -75,8 +83,10 @@ namespace Proiect
             cuvinteEG.Add(cuvant6, cuvant11);
             cuvinteEG.Add(cuvant8, cuvant12);
 
-            Dictionar dictionarEG = new Dictionar(cuvinteEG);
-            dictionarEG.scrieInFisier();
+            listaDictionare.Add(cuvinteEG);
+
+            //Dictionar dictionarEG = new Dictionar(cuvinteEG);
+            //dictionarEG.scrieInFisier();
 
             // Germana-Romana
             Dictionary<Cuvant, Cuvant> cuvinteGR = new Dictionary<Cuvant, Cuvant>();
@@ -86,8 +96,10 @@ namespace Proiect
             cuvinteGR.Add(cuvant11, cuvant5);
             cuvinteGR.Add(cuvant12, cuvant7);
 
-            Dictionar dictionarGR = new Dictionar(cuvinteGR);
-            dictionarGR.scrieInFisier();
+            listaDictionare.Add(cuvinteGR);
+
+            //Dictionar dictionarGR = new Dictionar(cuvinteGR);
+            //dictionarGR.scrieInFisier();
 
             // Germana-Engleza
             Dictionary<Cuvant, Cuvant> cuvinteGE = new Dictionary<Cuvant, Cuvant>();
@@ -97,8 +109,13 @@ namespace Proiect
             cuvinteGE.Add(cuvant11, cuvant6);
             cuvinteGE.Add(cuvant12, cuvant8);
 
-            Dictionar dictionarGE = new Dictionar(cuvinteGE);
-            dictionarGE.scrieInFisier();
+            listaDictionare.Add(cuvinteGE);
+
+            //Dictionar dictionarGE = new Dictionar(cuvinteGE);
+            //dictionarGE.scrieInFisier();
+
+            Dictionar dictionar = new Dictionar();
+            dictionar.scrieInFisier(listaDictionare);
 
             Application.Run(new Form1());
         }

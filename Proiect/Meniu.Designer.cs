@@ -28,22 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.meniuContainer = new System.Windows.Forms.Panel();
-            this.meniuTitlu = new System.Windows.Forms.Label();
-            this.cuvantTradusLabel = new System.Windows.Forms.Label();
-            this.traducereLabel = new System.Windows.Forms.Label();
-            this.cuvantTradusTextbox = new System.Windows.Forms.TextBox();
-            this.traducereTextbox = new System.Windows.Forms.TextBox();
-            this.tipCuvantTradus = new System.Windows.Forms.Label();
-            this.tipTraducere = new System.Windows.Forms.Label();
-            this.cuvantTradusSelect = new System.Windows.Forms.ComboBox();
-            this.traducereSelect = new System.Windows.Forms.ComboBox();
-            this.explicatieCuvantTradusLabel = new System.Windows.Forms.Label();
-            this.explicatieTraducereLabel = new System.Windows.Forms.Label();
-            this.explicatieCuvantTradusTextbox = new System.Windows.Forms.TextBox();
-            this.explicatieTraducereTextbox = new System.Windows.Forms.TextBox();
             this.adaugaButton = new System.Windows.Forms.Button();
+            this.explicatieTraducereTextbox = new System.Windows.Forms.TextBox();
+            this.explicatieCuvantTradusTextbox = new System.Windows.Forms.TextBox();
+            this.explicatieTraducereLabel = new System.Windows.Forms.Label();
+            this.explicatieCuvantTradusLabel = new System.Windows.Forms.Label();
+            this.traducereSelect = new System.Windows.Forms.ComboBox();
+            this.cuvantTradusSelect = new System.Windows.Forms.ComboBox();
+            this.tipTraducere = new System.Windows.Forms.Label();
+            this.tipCuvantTradus = new System.Windows.Forms.Label();
+            this.traducereTextbox = new System.Windows.Forms.TextBox();
+            this.cuvantTradusTextbox = new System.Windows.Forms.TextBox();
+            this.traducereLabel = new System.Windows.Forms.Label();
+            this.cuvantTradusLabel = new System.Windows.Forms.Label();
+            this.meniuTitlu = new System.Windows.Forms.Label();
+            this.errCatch = new System.Windows.Forms.ErrorProvider(this.components);
             this.meniuContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errCatch)).BeginInit();
             this.SuspendLayout();
             // 
             // meniuContainer
@@ -68,134 +71,6 @@
             this.meniuContainer.Size = new System.Drawing.Size(800, 450);
             this.meniuContainer.TabIndex = 0;
             // 
-            // meniuTitlu
-            // 
-            this.meniuTitlu.AutoSize = true;
-            this.meniuTitlu.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.meniuTitlu.Location = new System.Drawing.Point(276, 26);
-            this.meniuTitlu.Name = "meniuTitlu";
-            this.meniuTitlu.Size = new System.Drawing.Size(222, 23);
-            this.meniuTitlu.TabIndex = 0;
-            this.meniuTitlu.Text = "Adauga o traducere";
-            // 
-            // cuvantTradusLabel
-            // 
-            this.cuvantTradusLabel.AutoSize = true;
-            this.cuvantTradusLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuvantTradusLabel.Location = new System.Drawing.Point(83, 86);
-            this.cuvantTradusLabel.Name = "cuvantTradusLabel";
-            this.cuvantTradusLabel.Size = new System.Drawing.Size(89, 16);
-            this.cuvantTradusLabel.TabIndex = 1;
-            this.cuvantTradusLabel.Text = "Cuvant Tradus";
-            // 
-            // traducereLabel
-            // 
-            this.traducereLabel.AutoSize = true;
-            this.traducereLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.traducereLabel.Location = new System.Drawing.Point(523, 86);
-            this.traducereLabel.Name = "traducereLabel";
-            this.traducereLabel.Size = new System.Drawing.Size(64, 16);
-            this.traducereLabel.TabIndex = 2;
-            this.traducereLabel.Text = "Traducere";
-            // 
-            // cuvantTradusTextbox
-            // 
-            this.cuvantTradusTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cuvantTradusTextbox.Location = new System.Drawing.Point(86, 117);
-            this.cuvantTradusTextbox.Name = "cuvantTradusTextbox";
-            this.cuvantTradusTextbox.Size = new System.Drawing.Size(183, 20);
-            this.cuvantTradusTextbox.TabIndex = 3;
-            // 
-            // traducereTextbox
-            // 
-            this.traducereTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.traducereTextbox.Location = new System.Drawing.Point(526, 117);
-            this.traducereTextbox.Name = "traducereTextbox";
-            this.traducereTextbox.Size = new System.Drawing.Size(183, 20);
-            this.traducereTextbox.TabIndex = 4;
-            // 
-            // tipCuvantTradus
-            // 
-            this.tipCuvantTradus.AutoSize = true;
-            this.tipCuvantTradus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipCuvantTradus.Location = new System.Drawing.Point(83, 165);
-            this.tipCuvantTradus.Name = "tipCuvantTradus";
-            this.tipCuvantTradus.Size = new System.Drawing.Size(24, 16);
-            this.tipCuvantTradus.TabIndex = 5;
-            this.tipCuvantTradus.Text = "Tip";
-            // 
-            // tipTraducere
-            // 
-            this.tipTraducere.AutoSize = true;
-            this.tipTraducere.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipTraducere.Location = new System.Drawing.Point(523, 165);
-            this.tipTraducere.Name = "tipTraducere";
-            this.tipTraducere.Size = new System.Drawing.Size(24, 16);
-            this.tipTraducere.TabIndex = 6;
-            this.tipTraducere.Text = "Tip";
-            // 
-            // cuvantTradusSelect
-            // 
-            this.cuvantTradusSelect.FormattingEnabled = true;
-            this.cuvantTradusSelect.Items.AddRange(new object[] {
-            "Romana",
-            "Engleza",
-            "Germana"});
-            this.cuvantTradusSelect.Location = new System.Drawing.Point(86, 195);
-            this.cuvantTradusSelect.Name = "cuvantTradusSelect";
-            this.cuvantTradusSelect.Size = new System.Drawing.Size(125, 21);
-            this.cuvantTradusSelect.TabIndex = 7;
-            // 
-            // traducereSelect
-            // 
-            this.traducereSelect.FormattingEnabled = true;
-            this.traducereSelect.Items.AddRange(new object[] {
-            "Romana",
-            "Engleza",
-            "Germana"});
-            this.traducereSelect.Location = new System.Drawing.Point(526, 195);
-            this.traducereSelect.Name = "traducereSelect";
-            this.traducereSelect.Size = new System.Drawing.Size(125, 21);
-            this.traducereSelect.TabIndex = 8;
-            // 
-            // explicatieCuvantTradusLabel
-            // 
-            this.explicatieCuvantTradusLabel.AutoSize = true;
-            this.explicatieCuvantTradusLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.explicatieCuvantTradusLabel.Location = new System.Drawing.Point(83, 247);
-            this.explicatieCuvantTradusLabel.Name = "explicatieCuvantTradusLabel";
-            this.explicatieCuvantTradusLabel.Size = new System.Drawing.Size(64, 16);
-            this.explicatieCuvantTradusLabel.TabIndex = 9;
-            this.explicatieCuvantTradusLabel.Text = "Explicatie";
-            // 
-            // explicatieTraducereLabel
-            // 
-            this.explicatieTraducereLabel.AutoSize = true;
-            this.explicatieTraducereLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.explicatieTraducereLabel.Location = new System.Drawing.Point(523, 247);
-            this.explicatieTraducereLabel.Name = "explicatieTraducereLabel";
-            this.explicatieTraducereLabel.Size = new System.Drawing.Size(64, 16);
-            this.explicatieTraducereLabel.TabIndex = 10;
-            this.explicatieTraducereLabel.Text = "Explicatie";
-            // 
-            // explicatieCuvantTradusTextbox
-            // 
-            this.explicatieCuvantTradusTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.explicatieCuvantTradusTextbox.Location = new System.Drawing.Point(86, 277);
-            this.explicatieCuvantTradusTextbox.Multiline = true;
-            this.explicatieCuvantTradusTextbox.Name = "explicatieCuvantTradusTextbox";
-            this.explicatieCuvantTradusTextbox.Size = new System.Drawing.Size(183, 61);
-            this.explicatieCuvantTradusTextbox.TabIndex = 11;
-            // 
-            // explicatieTraducereTextbox
-            // 
-            this.explicatieTraducereTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.explicatieTraducereTextbox.Location = new System.Drawing.Point(526, 277);
-            this.explicatieTraducereTextbox.Multiline = true;
-            this.explicatieTraducereTextbox.Name = "explicatieTraducereTextbox";
-            this.explicatieTraducereTextbox.Size = new System.Drawing.Size(183, 61);
-            this.explicatieTraducereTextbox.TabIndex = 12;
-            // 
             // adaugaButton
             // 
             this.adaugaButton.BackColor = System.Drawing.Color.Coral;
@@ -209,6 +84,138 @@
             this.adaugaButton.UseVisualStyleBackColor = false;
             this.adaugaButton.Click += new System.EventHandler(this.adaugaButton_Click);
             // 
+            // explicatieTraducereTextbox
+            // 
+            this.explicatieTraducereTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.explicatieTraducereTextbox.Location = new System.Drawing.Point(526, 277);
+            this.explicatieTraducereTextbox.Multiline = true;
+            this.explicatieTraducereTextbox.Name = "explicatieTraducereTextbox";
+            this.explicatieTraducereTextbox.Size = new System.Drawing.Size(183, 61);
+            this.explicatieTraducereTextbox.TabIndex = 12;
+            // 
+            // explicatieCuvantTradusTextbox
+            // 
+            this.explicatieCuvantTradusTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.explicatieCuvantTradusTextbox.Location = new System.Drawing.Point(86, 277);
+            this.explicatieCuvantTradusTextbox.Multiline = true;
+            this.explicatieCuvantTradusTextbox.Name = "explicatieCuvantTradusTextbox";
+            this.explicatieCuvantTradusTextbox.Size = new System.Drawing.Size(183, 61);
+            this.explicatieCuvantTradusTextbox.TabIndex = 11;
+            // 
+            // explicatieTraducereLabel
+            // 
+            this.explicatieTraducereLabel.AutoSize = true;
+            this.explicatieTraducereLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.explicatieTraducereLabel.Location = new System.Drawing.Point(523, 247);
+            this.explicatieTraducereLabel.Name = "explicatieTraducereLabel";
+            this.explicatieTraducereLabel.Size = new System.Drawing.Size(64, 16);
+            this.explicatieTraducereLabel.TabIndex = 10;
+            this.explicatieTraducereLabel.Text = "Explicatie";
+            // 
+            // explicatieCuvantTradusLabel
+            // 
+            this.explicatieCuvantTradusLabel.AutoSize = true;
+            this.explicatieCuvantTradusLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.explicatieCuvantTradusLabel.Location = new System.Drawing.Point(83, 247);
+            this.explicatieCuvantTradusLabel.Name = "explicatieCuvantTradusLabel";
+            this.explicatieCuvantTradusLabel.Size = new System.Drawing.Size(64, 16);
+            this.explicatieCuvantTradusLabel.TabIndex = 9;
+            this.explicatieCuvantTradusLabel.Text = "Explicatie";
+            // 
+            // traducereSelect
+            // 
+            this.traducereSelect.FormattingEnabled = true;
+            this.traducereSelect.Items.AddRange(new object[] {
+            "Romana",
+            "Engleza",
+            "Germana"});
+            this.traducereSelect.Location = new System.Drawing.Point(526, 195);
+            this.traducereSelect.Name = "traducereSelect";
+            this.traducereSelect.Size = new System.Drawing.Size(125, 21);
+            this.traducereSelect.TabIndex = 8;
+            // 
+            // cuvantTradusSelect
+            // 
+            this.cuvantTradusSelect.FormattingEnabled = true;
+            this.cuvantTradusSelect.Items.AddRange(new object[] {
+            "Romana",
+            "Engleza",
+            "Germana"});
+            this.cuvantTradusSelect.Location = new System.Drawing.Point(86, 195);
+            this.cuvantTradusSelect.Name = "cuvantTradusSelect";
+            this.cuvantTradusSelect.Size = new System.Drawing.Size(125, 21);
+            this.cuvantTradusSelect.TabIndex = 7;
+            // 
+            // tipTraducere
+            // 
+            this.tipTraducere.AutoSize = true;
+            this.tipTraducere.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipTraducere.Location = new System.Drawing.Point(523, 165);
+            this.tipTraducere.Name = "tipTraducere";
+            this.tipTraducere.Size = new System.Drawing.Size(24, 16);
+            this.tipTraducere.TabIndex = 6;
+            this.tipTraducere.Text = "Tip";
+            // 
+            // tipCuvantTradus
+            // 
+            this.tipCuvantTradus.AutoSize = true;
+            this.tipCuvantTradus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tipCuvantTradus.Location = new System.Drawing.Point(83, 165);
+            this.tipCuvantTradus.Name = "tipCuvantTradus";
+            this.tipCuvantTradus.Size = new System.Drawing.Size(24, 16);
+            this.tipCuvantTradus.TabIndex = 5;
+            this.tipCuvantTradus.Text = "Tip";
+            // 
+            // traducereTextbox
+            // 
+            this.traducereTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traducereTextbox.Location = new System.Drawing.Point(526, 117);
+            this.traducereTextbox.Name = "traducereTextbox";
+            this.traducereTextbox.Size = new System.Drawing.Size(183, 20);
+            this.traducereTextbox.TabIndex = 4;
+            // 
+            // cuvantTradusTextbox
+            // 
+            this.cuvantTradusTextbox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuvantTradusTextbox.Location = new System.Drawing.Point(86, 117);
+            this.cuvantTradusTextbox.Name = "cuvantTradusTextbox";
+            this.cuvantTradusTextbox.Size = new System.Drawing.Size(183, 20);
+            this.cuvantTradusTextbox.TabIndex = 3;
+            // 
+            // traducereLabel
+            // 
+            this.traducereLabel.AutoSize = true;
+            this.traducereLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.traducereLabel.Location = new System.Drawing.Point(523, 86);
+            this.traducereLabel.Name = "traducereLabel";
+            this.traducereLabel.Size = new System.Drawing.Size(64, 16);
+            this.traducereLabel.TabIndex = 2;
+            this.traducereLabel.Text = "Traducere";
+            // 
+            // cuvantTradusLabel
+            // 
+            this.cuvantTradusLabel.AutoSize = true;
+            this.cuvantTradusLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuvantTradusLabel.Location = new System.Drawing.Point(83, 86);
+            this.cuvantTradusLabel.Name = "cuvantTradusLabel";
+            this.cuvantTradusLabel.Size = new System.Drawing.Size(89, 16);
+            this.cuvantTradusLabel.TabIndex = 1;
+            this.cuvantTradusLabel.Text = "Cuvant Tradus";
+            // 
+            // meniuTitlu
+            // 
+            this.meniuTitlu.AutoSize = true;
+            this.meniuTitlu.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.meniuTitlu.Location = new System.Drawing.Point(276, 26);
+            this.meniuTitlu.Name = "meniuTitlu";
+            this.meniuTitlu.Size = new System.Drawing.Size(222, 23);
+            this.meniuTitlu.TabIndex = 0;
+            this.meniuTitlu.Text = "Adauga o traducere";
+            // 
+            // errCatch
+            // 
+            this.errCatch.ContainerControl = this;
+            // 
             // Meniu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -219,6 +226,7 @@
             this.Text = "Meniu";
             this.meniuContainer.ResumeLayout(false);
             this.meniuContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errCatch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +248,6 @@
         private System.Windows.Forms.TextBox explicatieTraducereTextbox;
         private System.Windows.Forms.TextBox explicatieCuvantTradusTextbox;
         private System.Windows.Forms.Button adaugaButton;
+        private System.Windows.Forms.ErrorProvider errCatch;
     }
 }
