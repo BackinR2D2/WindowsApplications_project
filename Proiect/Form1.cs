@@ -163,5 +163,18 @@ namespace Proiect
             listaTraduceri.BringToFront();
             listaTraduceri.Show();
         }
+
+        private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.TopLevel = false;
+            if (MainContainer.Controls.Count > 0)
+            {
+                MainContainer.Controls.Clear();
+            }
+            MainContainer.Controls.Add(dashboard);
+            dashboard.BringToFront();
+            dashboard.Show();
+        }
     }
 }

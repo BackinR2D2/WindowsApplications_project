@@ -39,10 +39,11 @@
             this.germanaMeniu = new System.Windows.Forms.ToolStripMenuItem();
             this.germanaRomanaMeniu = new System.Windows.Forms.ToolStripMenuItem();
             this.germanaEnglezaMeniu = new System.Windows.Forms.ToolStripMenuItem();
+            this.listaTraduceriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adaugaTraducereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainContainer = new System.Windows.Forms.Panel();
-            this.listaTraduceriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             this.englezaMeniu,
             this.germanaMeniu,
             this.listaTraduceriToolStripMenuItem,
+            this.dashboardToolStripMenuItem,
             this.adaugaTraducereToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -143,6 +145,14 @@
             this.germanaEnglezaMeniu.Text = "Engleza";
             this.germanaEnglezaMeniu.Click += new System.EventHandler(this.germanaEnglezaMeniu_Click);
             // 
+            // listaTraduceriToolStripMenuItem
+            // 
+            this.listaTraduceriToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listaTraduceriToolStripMenuItem.Name = "listaTraduceriToolStripMenuItem";
+            this.listaTraduceriToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
+            this.listaTraduceriToolStripMenuItem.Text = "Lista Traduceri";
+            this.listaTraduceriToolStripMenuItem.Click += new System.EventHandler(this.listaTraduceriToolStripMenuItem_Click);
+            // 
             // adaugaTraducereToolStripMenuItem
             // 
             this.adaugaTraducereToolStripMenuItem.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,13 +178,13 @@
             this.MainContainer.Size = new System.Drawing.Size(800, 417);
             this.MainContainer.TabIndex = 2;
             // 
-            // listaTraduceriToolStripMenuItem
+            // dashboardToolStripMenuItem
             // 
-            this.listaTraduceriToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listaTraduceriToolStripMenuItem.Name = "listaTraduceriToolStripMenuItem";
-            this.listaTraduceriToolStripMenuItem.Size = new System.Drawing.Size(104, 29);
-            this.listaTraduceriToolStripMenuItem.Text = "Lista Traduceri";
-            this.listaTraduceriToolStripMenuItem.Click += new System.EventHandler(this.listaTraduceriToolStripMenuItem_Click);
+            this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(81, 29);
+            this.dashboardToolStripMenuItem.Text = "Dashboard";
+            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -210,6 +220,7 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adaugaTraducereToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaTraduceriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dashboardToolStripMenuItem;
     }
 }
 

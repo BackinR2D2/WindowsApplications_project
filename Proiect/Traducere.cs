@@ -87,11 +87,23 @@ namespace Proiect
                 {
                     if(item.Key.Label.ToLower() == traducereInputSearchQuery.ToLower())
                     {
-                        MessageBox.Show(item.Value.Label + " - " + item.Key.Explicatie, item.Key.Label);
+                        //MessageBox.Show(item.Value.Label + " - " + item.Key.Explicatie, item.Key.Label);
+                        
+                        header.Text = item.Key.Label + ": " + item.Value.Label;
+                        header.Cursor = Cursors.Hand;
+
+                        explicatieLbl.Text = item.Key.Explicatie.ToString();
+
                         break;
                     }
                 }
             }
+        }
+
+        private void header_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(header.Text);
+            MessageBox.Show("Traducerea a fost copiata in clipboard.");
         }
     }
 }

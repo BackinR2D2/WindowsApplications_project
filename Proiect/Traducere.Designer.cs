@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.TraducereContainer = new System.Windows.Forms.Panel();
+            this.labelCuvant = new System.Windows.Forms.Label();
             this.traduceButton = new System.Windows.Forms.Button();
             this.CuvantInput = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.labelCuvant = new System.Windows.Forms.Label();
+            this.explicatieLbl = new System.Windows.Forms.Label();
+            this.header = new System.Windows.Forms.Label();
             this.TraducereContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // TraducereContainer
             // 
             this.TraducereContainer.AutoSize = true;
+            this.TraducereContainer.Controls.Add(this.explicatieLbl);
+            this.TraducereContainer.Controls.Add(this.header);
             this.TraducereContainer.Controls.Add(this.labelCuvant);
             this.TraducereContainer.Controls.Add(this.traduceButton);
             this.TraducereContainer.Controls.Add(this.CuvantInput);
@@ -49,6 +53,16 @@
             this.TraducereContainer.Size = new System.Drawing.Size(800, 450);
             this.TraducereContainer.TabIndex = 0;
             // 
+            // labelCuvant
+            // 
+            this.labelCuvant.AutoSize = true;
+            this.labelCuvant.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCuvant.Location = new System.Drawing.Point(271, 75);
+            this.labelCuvant.Name = "labelCuvant";
+            this.labelCuvant.Size = new System.Drawing.Size(85, 16);
+            this.labelCuvant.TabIndex = 6;
+            this.labelCuvant.Text = "Scrieti cuvant";
+            // 
             // traduceButton
             // 
             this.traduceButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -57,7 +71,7 @@
             this.traduceButton.FlatAppearance.BorderSize = 0;
             this.traduceButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.traduceButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.traduceButton.Location = new System.Drawing.Point(310, 236);
+            this.traduceButton.Location = new System.Drawing.Point(318, 147);
             this.traduceButton.Name = "traduceButton";
             this.traduceButton.Size = new System.Drawing.Size(142, 32);
             this.traduceButton.TabIndex = 5;
@@ -70,7 +84,7 @@
             this.CuvantInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CuvantInput.Location = new System.Drawing.Point(266, 183);
+            this.CuvantInput.Location = new System.Drawing.Point(274, 94);
             this.CuvantInput.Name = "CuvantInput";
             this.CuvantInput.Size = new System.Drawing.Size(233, 20);
             this.CuvantInput.TabIndex = 4;
@@ -82,7 +96,7 @@
             this.button1.BackColor = System.Drawing.Color.Tan;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(311, 274);
+            this.button1.Location = new System.Drawing.Point(319, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 32);
             this.button1.TabIndex = 3;
@@ -90,15 +104,25 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // labelCuvant
+            // explicatieLbl
             // 
-            this.labelCuvant.AutoSize = true;
-            this.labelCuvant.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCuvant.Location = new System.Drawing.Point(263, 164);
-            this.labelCuvant.Name = "labelCuvant";
-            this.labelCuvant.Size = new System.Drawing.Size(85, 16);
-            this.labelCuvant.TabIndex = 6;
-            this.labelCuvant.Text = "Scrieti cuvant";
+            this.explicatieLbl.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.explicatieLbl.Location = new System.Drawing.Point(12, 297);
+            this.explicatieLbl.Name = "explicatieLbl";
+            this.explicatieLbl.Size = new System.Drawing.Size(776, 144);
+            this.explicatieLbl.TabIndex = 10;
+            this.explicatieLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // header
+            // 
+            this.header.Cursor = System.Windows.Forms.Cursors.Default;
+            this.header.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.header.Location = new System.Drawing.Point(223, 256);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(337, 41);
+            this.header.TabIndex = 9;
+            this.header.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.header.Click += new System.EventHandler(this.header_Click);
             // 
             // Traducere
             // 
@@ -123,5 +147,7 @@
         private System.Windows.Forms.TextBox CuvantInput;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelCuvant;
+        private System.Windows.Forms.Label explicatieLbl;
+        private System.Windows.Forms.Label header;
     }
 }
