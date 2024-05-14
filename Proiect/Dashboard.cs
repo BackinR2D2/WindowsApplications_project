@@ -23,7 +23,7 @@ namespace Proiect
 
         void FillChart()
         {
-            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andreea\\source\\repos\\Proiect\\Proiect\\Proiect.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Andreea\\Documents\\Proiect.mdf;Integrated Security=True;Connect Timeout=30");
             DataTable dt = new DataTable();
 
 
@@ -38,7 +38,7 @@ namespace Proiect
             grafic.Series["Traduceri"].XValueMember = "cuvantTradusTip";
             grafic.Series["Traduceri"].YValueMembers = "Count";
 
-            grafic.Titles.Add("Count");
+            grafic.Titles.Add("Numarul de cuvinte traduse dupa tip");
 
 
         }
@@ -56,13 +56,8 @@ namespace Proiect
             {
                 this.Validate();
                 this.traducereBindingSource.EndEdit();
-                this.proiectDataSetBindingSource.EndEdit();
-                dataGridView1.EndEdit();
-                
-                
                 this.traducereTableAdapter.Update(this.proiectDataSet.Traducere);
-
-                MessageBox.Show($"Changes saved successfully.");
+                MessageBox.Show($"Modifcari salvate cu succes");
             }
             catch (Exception ex)
             {
