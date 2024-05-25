@@ -95,7 +95,6 @@ namespace Proiect
             printDlg.Document = printDoc;
             printDlg.AllowSelection = true;
             printDlg.AllowSomePages = true;
-            //Call ShowDialog
             if (printDlg.ShowDialog() == DialogResult.OK)
             {
                 printDoc.PrintPage += new PrintPageEventHandler(pd_PrintPage);

@@ -37,6 +37,7 @@ namespace Proiect
             {
                 errCatch.SetError(cuvantTradusSelect, "Cuvintele nu pot avea acelasi tip.");
                 errCatch.SetError(traducereSelect, "Cuvintele nu pot avea acelasi tip.");
+                return;
             } else
             {
                 errCatch.SetError(cuvantTradusSelect, "");
